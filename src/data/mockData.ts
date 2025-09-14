@@ -31,7 +31,7 @@ export const mockPatients: Patient[] = [
     allergies: ['Frutos do mar'],
     medications: ['Metotrexato 15mg/semana'],
   },
-  { id: '4', name: 'Ramon Charly Vieira Costa', dateOfBirth: '1990-04-10', phone: '(21) 98877-6655', gender: 'Masculino' },
+  { id: '4', name: 'Ramon Sharly Vieira Costa', dateOfBirth: '1999-03-11', phone: '(21) 98877-6655', gender: 'Masculino' },
   { id: '5', name: 'Beatriz Souza', dateOfBirth: '1985-04-30', phone: '(12) 9-8452-1452', gender: 'Feminino' },
 ];
 
