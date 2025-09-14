@@ -24,7 +24,6 @@ import { mockPatients } from "../data/mockData"
 const patientFormSchema = z.object({
   name: z.string().min(3, { message: "O nome completo é obrigatório." }),
   dateOfBirth: z.string().min(1, { message: "A data de nascimento é obrigatória." }),
-  // A MUDANÇA ESTÁ AQUI
   gender: z.string().min(1, { message: "Por favor, selecione o gênero." }),
   phone: z.string().min(10, { message: "O telefone é obrigatório." }),
   cpf: z.string().optional(),
@@ -40,6 +39,7 @@ export function NewPatient() {
     defaultValues: {
       name: "",
       dateOfBirth: "",
+      gender: "", // <-- AQUI ESTÁ A CORREÇÃO
       phone: "",
       cpf: "",
       susCard: "",
