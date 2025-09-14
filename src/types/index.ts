@@ -24,23 +24,19 @@ export interface AppointmentSummary {
 }
 
 export interface AppointmentDetails extends AppointmentSummary {
+  attendanceDate?: string; // Adicionado para consistência
   anamnesis?: {
     chiefComplaint?: string;
     currentIllnessHistory?: string;
-    // ... outros campos da anamnese ...
   };
   physicalExam?: {
-    vitalSigns?: {
-      bloodPressure?: string; // Ex: "120/80"
-      heartRate?: number;
-      respiratoryRate?: number;
-      temperature?: number;
-      oxygenSaturation?: number;
-      glucose?: number;
-    };
-    skinAndMucous?: {
-      aspect?: string;
-    };
+    bloodPressure?: string;
+    heartRate?: string;
+    respiratoryRate?: string;
+    temperature?: string;
+    oxygenSaturation?: string;
+    glucose?: string;
+    skinAndMucous?: string;
     headAndNeck?: string;
     respiratorySystem?: string;
     cardiovascularSystem?: string;
@@ -48,5 +44,13 @@ export interface AppointmentDetails extends AppointmentSummary {
     limbs?: string;
     neurologicalSystem?: string;
   };
-  // As outras seções serão adicionadas depois
+  diagnostics?: {
+    diagnoses?: { value: string }[];
+    interventions?: { value: string }[];
+  };
+  evolution?: {
+    description?: string;
+    guidelines?: string;
+    nextVisit?: string;
+  };
 }
