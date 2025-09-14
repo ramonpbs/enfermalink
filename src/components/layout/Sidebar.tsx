@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Home, Users, UserPlus, Calendar } from 'lucide-react';
 
-// 1. Definimos as propriedades que o componente pode receber
 interface SidebarProps {
-  onLinkClick?: () => void; // Uma função opcional
+  onLinkClick?: () => void;
 }
 
 export function Sidebar({ onLinkClick }: SidebarProps) {
@@ -17,10 +16,9 @@ export function Sidebar({ onLinkClick }: SidebarProps) {
             <path d="M12 12L2 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M17 4.5L7 9.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-        <span>SaúdeDigital</span>
+        <span>EnfermaLink</span>
       </div>
       <nav>
-        {/* 2. Adicionamos o evento onClick em cada Link */}
         <ul className="space-y-2">
           <li><Link to="/" onClick={onLinkClick} className="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><Home className="h-5 w-5" /> Início</Link></li>
           <li><Link to="/pacientes" onClick={onLinkClick} className="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><Users className="h-5 w-5" /> Pacientes</Link></li>

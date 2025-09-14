@@ -22,7 +22,7 @@ function Logo() {
           <path d="M12 12L2 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M17 4.5L7 9.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
-      <span className="text-xl font-bold">SaúdeDigital</span>
+      <span className="text-xl font-bold">EnfermaLink</span>
     </Link>
   );
 }
@@ -40,7 +40,6 @@ export function Header() {
           </Button>
         </SheetTrigger>
         <SheetContent side="left" className="p-0 bg-gray-900 text-white w-64 shadow-none border-none">
-          {/* A MUDANÇA ESTÁ AQUI */}
           <SheetHeader>
             <SheetTitle className="sr-only">Menu de Navegação</SheetTitle>
             <SheetDescription className="sr-only">
