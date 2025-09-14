@@ -12,7 +12,7 @@ import { Appointments } from './pages/Appointments.tsx'
 import { NotFound } from './pages/NotFound.tsx'
 import { PatientDetails } from './pages/PatientDetails.tsx'
 import { NewAttendance } from './pages/NewAttendance.tsx'
-import { SelectPatient } from './pages/SelectPatient.tsx' // 1. Importe a nova página
+import { SelectPatient } from './pages/SelectPatient.tsx'
 
 const router = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       { path: '/pacientes/:id/novo-atendimento', element: <NewAttendance /> },
       { path: '/novo-paciente', element: <NewPatient /> },
       { path: '/agendamentos', element: <Appointments /> },
-      { path: '/agendamentos/selecionar-paciente', element: <SelectPatient /> }, // 2. Adicione a nova rota
+      { path: '/agendamentos/selecionar-paciente', element: <SelectPatient /> },
     ],
   },
 ])
