@@ -9,13 +9,8 @@ export function Sidebar({ onLinkClick }: SidebarProps) {
   return (
     <aside className="w-56 h-full bg-gray-900 text-white p-4 flex flex-col">
       <div className="text-2xl font-bold mb-8 flex items-center gap-2 px-2">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-blue-400">
-            <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
-            <path d="M12 12L22 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M12 12V22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M12 12L2 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M17 4.5L7 9.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+        {/* SVG substituído pela tag img abaixo */}
+        <img src="/vite.svg" alt="EnfermaLink Logo" width="40" height="40" />
         <span>EnfermaLink</span>
       </div>
       <nav>
