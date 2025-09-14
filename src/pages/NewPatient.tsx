@@ -39,7 +39,7 @@ export function NewPatient() {
     defaultValues: {
       name: "",
       dateOfBirth: "",
-      gender: "", // <-- AQUI ESTÁ A CORREÇÃO
+      gender: "",
       phone: "",
       cpf: "",
       susCard: "",
@@ -69,25 +69,71 @@ export function NewPatient() {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <FormField control={form.control} name="name" render={({ field }) => ( <FormItem> <FormLabel>Nome completo *</FormLabel> <FormControl> <Input placeholder="Nome do paciente" {...field} /> </FormControl> <FormMessage /> </FormItem> )} />
-              <FormField control={form.control} name="dateOfBirth" render={({ field }) => ( <FormItem> <FormLabel>Data de Nascimento *</FormLabel> <FormControl> <Input type="date" {...field} /> </FormControl> <FormMessage /> </FormItem> )} />
-              <FormField control={form.control} name="gender" render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Gênero *</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl><SelectTrigger><SelectValue placeholder="Selecione o gênero" /></SelectTrigger></FormControl>
-                    <SelectContent>
-                      <SelectItem value="Feminino">Feminino</SelectItem>
-                      <SelectItem value="Masculino">Masculino</SelectItem>
-                      <SelectItem value="Outro">Outro</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )} />
-              <FormField control={form.control} name="phone" render={({ field }) => ( <FormItem> <FormLabel>Telefone *</FormLabel> <FormControl> <Input placeholder="(00) 00000-0000" {...field} /> </FormControl> <FormMessage /> </FormItem> )} />
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Nome completo *</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Nome do paciente" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="dateOfBirth"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Data de Nascimento *</FormLabel>
+                    <FormControl>
+                      <Input type="date" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="gender"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Gênero *</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Selecione o gênero" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="Feminino">Feminino</SelectItem>
+                        <SelectItem value="Masculino">Masculino</SelectItem>
+                        <SelectItem value="Outro">Outro</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Telefone *</FormLabel>
+                    <FormControl>
+                      <Input placeholder="(00) 00000-0000" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             </div>
-            <div className="flex justify-end"> <Button type="submit">Salvar</Button> </div>
+            <div className="flex justify-end">
+              <Button type="submit">Salvar</Button>
+            </div>
           </form>
         </Form>
       </div>
